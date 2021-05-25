@@ -1,0 +1,17 @@
+<h1>SE TIENE {{ contador }} PALABRAS EN TU TEXTO</h1>
+
+<a href="{% url 'home' %}">COMIENZA DE NUEVO</a>
+
+<h1>EL TEXTO</h1>
+{{ fulltext }}
+
+<h1>CONTADOR DE PALABRAS: </h1>
+
+{% for word, counttotal in sortedwords %} 
+
+{{ word }} - {{ counttotal }}
+<br />
+
+
+
+{% endfor %}
